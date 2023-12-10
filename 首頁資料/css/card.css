@@ -3,6 +3,20 @@ img,video{height: 100%;width: 100%;object-fit: cover;}
 button, input{border: 0;}
 @keyframes scalesIn{from{scale:1.1;}to{scale:1.2;}}
 @keyframes scalesOut{from{scale:1.2;}to{scale:1.1;}}
+a{text-decoration: none;color: unset;}
+
+/*welcome*/
+.welcome{z-index: 10;position: fixed;inset: 0;}
+.welcome-logo{position: relative;display: inline-block; top:100px; width: 7vw;height: calc(7vw + 20px); margin: 5vh 4vw;}
+#welcome-img,.welcome-img{position: absolute; height: 7vw; width: 100%;border-radius: 10px;}
+#welcome-txt,.welcome-txt{position: absolute;top: 7vw;left: -2vw; width: 11vw;text-overflow: ellipsis; text-wrap: nowrap;overflow: hidden;
+     margin: 0px;margin-top: 5px; text-align: center;font-family: "Microsoft JhengHei UI";}
+#welcome-video{position: absolute; display: none;width: 100vw;left: 0px;}
+.welcome input{position: absolute;top: 50px;height: 50px;width: 80vw;left: 10vw;border-radius: 25px;margin: auto; padding-left:50px; font-size: 25px;}
+#welcome-search img{position: absolute;top: 50px;width: 50px; height: 50px;left: 10vw;border-radius: 10px;}
+.welcome-background{position: absolute;left: 0;}
+.bckgrd-btn{position: absolute;right: 0px;bottom: 0px;opacity: 0.1;}
+.bckgrd-btn:hover{opacity: 0.3;}
 
 /*pool*/
 .pool-area{position: fixed;}
@@ -44,7 +58,7 @@ button, input{border: 0;}
 .stone{position: fixed;top: 0px;right: 0px;height: 5vh;opacity: 0.7;}
 .source{
     margin-top: 5px;margin-right: 5px; height: 100%;
-    border-radius: 3.5vh; width: 150px;background-color: #111111;
+    border-radius: 3.5vh; width: 150px;
     text-align: center;line-height: 5vh;color: aliceblue;
 }
 .add-source{
@@ -74,15 +88,16 @@ button, input{border: 0;}
 #skip{position: fixed;top: 0;right: 0;margin: 50px;height: 50px;width: 150px;opacity: 0.5;}
 
 /*result*/
-.result{position: fixed;inset: 0px;background-color: #111111;display: none;}
+.result{position: fixed;inset: 0px;display: none;}
 .card{position: relative;display: inline-block; top: 10vh;height: 80vh;left: 10vw;width: 8vw;
     opacity: 0;background-color: 00000000;object-fit:fill;z-index: 5;}
 #one-card-video{position: absolute;top: 0px;margin: auto;text-align: center;height: 100%;opacity: 0;z-index: 0;}
 .result h1{position: absolute;width: 100vw; text-align: center;line-height: 100vh; z-index: 5;opacity: 0;}
 .gacha img                  {animation: 0.5s scalesOut forwards;}
 .gacha img:hover         {animation: 0.2s scalesIn forwards;}
-.card      {animation: 0.2s scalesOut  forwards;}
-.card:hover    {animation: 0.2s scalesIn   forwards;}
+.card,.welcome-logo      {animation: 0.2s scalesOut  forwards;}
+.card:hover,.welcome-logo:hover    {animation: 0.2s scalesIn   forwards;}
 
 /*color*/
 body{background-color: black;color: white;}
+.result,.source{background-color: #111111}
