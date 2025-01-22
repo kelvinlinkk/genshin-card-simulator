@@ -1,4 +1,4 @@
-# genshin-card-simulator
+# genshin-gacha-simulator
 
 揚中之數原神抽卡簡易模擬器
 
